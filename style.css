@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 15px;
+}
+
+.app-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  padding: 25px;
+  text-align: center;
+}
+
+.header h1 {
+  color: #2e7d32;
+  font-size: 1.8rem;
+}
+
+.header p {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+}
+
+.button-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  border: none;
+  border-radius: 16px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn .icon {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.btn .label {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.btn small {
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+.btn-camera { background: #2e7d32; }
+.btn-voice { background: #0288d1; }
+.btn-location { background: #ed6c02; }
+
+.output-card {
+  background: #f8fafc;
+  border: 2px dashed #cbd5e1;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: left;
+}
+
+.status-indicator {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.status-indicator.blue { background: #0288d1; }
+.status-indicator.green { background: #2e7d32; }
+.status-indicator.red { background: #d32f2f; }
+
+.output-card h3 {
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.output-card p {
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.btn-audio {
+  background: #e2e8f0;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #1e293b;
+  cursor: pointer;
+  width: 100%;
+}

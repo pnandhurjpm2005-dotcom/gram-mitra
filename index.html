@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GramMitra - Rural Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app-card">
+    <header class="header">
+      <h1>🌾 GramMitra</h1>
+      <p>One-Tap Village Assistant</p>
+    </header>
+
+    <!-- Main Action Buttons -->
+    <div class="button-grid">
+      <button class="btn btn-camera" onclick="triggerCamera()">
+        <span class="icon">📷</span>
+        <span class="label">Scan Photo</span>
+        <small>Water, Crop, or Cattle</small>
+      </button>
+
+      <button class="btn btn-voice" onclick="startVoice()">
+        <span class="icon">🎙️</span>
+        <span class="label">Speak (आवाज़)</span>
+        <small>Ask in Your Language</small>
+      </button>
+
+      <button class="btn btn-location" onclick="getVillageUpdates()">
+        <span class="icon">📍</span>
+        <span class="label">My Village</span>
+        <small>Weather & Safety</small>
+      </button>
+    </div>
+
+    <!-- Hidden Camera File Input -->
+    <input type="file" id="cameraInput" accept="image/*" capture="environment" onchange="handleImage(event)" style="display: none;">
+
+    <!-- Dynamic Output Card -->
+    <div class="output-card" id="outputCard">
+      <div class="status-indicator blue" id="statusBadge">Ready</div>
+      <h3 id="resultTitle">Press any button to start</h3>
+      <p id="resultText">Select Camera to scan, Voice to ask questions, or Location for village updates.</p>
+      
+      <div id="audioControl" style="display: none; margin-top: 15px;">
+        <button class="btn-audio" onclick="replayAudio()">🔊 Repeat Voice Advice</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
